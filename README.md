@@ -46,7 +46,8 @@ pip3 install aiogram
 apt install screen
 screen
 ```
-Когда появилось окно нажимаем пробел.
+  Когда появилось окно нажимаем пробел.
+
 10. Запускаем бота:
 ```
 python main.py
