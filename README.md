@@ -31,13 +31,48 @@ sudo apt -y upgrade
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 sudo apt install -y python3-pip
 ```
-7. Устанавливаем библиотеку aiogram:
+7. Устанавливаем и активируем виртуальное окружение:
+```
+sudo apt install -y python3-venv
+python3 -m venv env
+source env/bin/activate
+```
+8. Устанавливаем python библиотеку aiogram:
 ```
 pip3 install aiogram
 ```
-8. Запускаем бота:
+9. Устанавливаем утилиту screen:
+```
+apt install screen
+screen
+```
+Когда появилось окно нажимаем пробел.
+10. Запускаем бота:
 ```
 python main.py
 ```
 ГОТОВО!
 =======
+### P.S.
+Если захотели отключить бота.
+
+1. Если у вас запущено больше чем одна screen - сессия:
+  ```
+  screen -ls
+  ```
+  Выбираем нужный нам screen, и присоединяемся к нему. Например:
+  ```
+  screen -x 2762.pts-0.debian
+  ```
+  Прожимаем Ctrl — a и вводим команду 
+  ```
+  :quit
+  ```
+2. Если сессия одна:
+  ```
+  screen –x
+  ```
+  Прожимаем Ctrl — a и вводим команду 
+  ```
+  :quit
+  ```
